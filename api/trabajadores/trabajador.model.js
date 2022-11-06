@@ -13,10 +13,8 @@ const trabajadorSchema = mongoose.Schema({
         // areaEspecialidad:String,
         // gradoEstudio:String
     },
-    tutorados:[String]
+    tutorados:[String],
+    enabled:Boolean
 });
 
 module.exports = mongoose.model('trabajadores', trabajadorSchema);
-// const trabajadorSchema = mongoose.model.trabajadores || mongoose.model('trabajadores', Schema);
-
-// export default trabajadorSchema;
