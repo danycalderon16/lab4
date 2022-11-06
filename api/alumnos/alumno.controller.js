@@ -17,7 +17,7 @@ exports.getAll = ((req, res,) => {
 exports.getOneByName = ((req, res,) => {
     try {
         Alumno.findOne({ "nombre": req.params.nombre }, (err, alumno) => {
-            if (err) { return res.send(err) }
+            if (err || alumno===null) { return res.send('Alumno no encontrado. Error: '+err) }
             return res.status(200).json(alumno);
         });
     } catch (error) {
@@ -55,14 +55,15 @@ exports.create = ((req, res) => {
 
                     Trabajador.updateOne(
                         { nombre: newAlumno.tutor },
-                        { $push: { tutorados: newAlumno.nombre } }, (err) => {
+                        { $push: { tutorados: newAlumno.nombre } }, (err,result) => {
+                            console.log(result);
                             if (err) { return res.send(err) }
                         });
                     Escuela.updateOne(
                         { nombre: newAlumno.estudia },
                         {
                             $push: { alumnos: { nombre: newAlumno.nombre, fechaIngre: newAlumno.fechaIngre } }
-                        }, function (err) {
+                        }, function (err,result) {
                             if (err) return res.send(err);
                         });
                     Alumno.create(newAlumno, (err) => {

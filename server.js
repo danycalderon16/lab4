@@ -18,9 +18,9 @@ async function main() {
     await mongoose.connect('mongodb://localhost:27017/gestion-escolar');
 }
 
-//app.use('/api', rutas);
 app.use('/api/alumnos', alumnos);
 app.use('/api/escuelas', escuelas);
 app.use('/api/trabajadores', trabajadores);
+app.use('/api', (req,res)=>res.status(200).send("OK"));
 
 app.listen(port,()=>{console.log('Escucha en puerto:'+port)})

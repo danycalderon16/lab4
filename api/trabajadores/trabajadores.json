@@ -1,0 +1,399 @@
+[
+    {
+        "_id": "635810d71d19f278ad894d97",
+        "curp": "ZUCE93845",
+        "nombre": "Clara Cecilia Zurita",
+        "telefono": "3114857813",
+        "numCuenta": "4152835987383",
+        "trabajaEn": "18PRI342",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 3,
+            "areaEspecialidad": "Matematicas",
+            "gradoEstudio": "Licenciatura"
+        },
+        "tutorados": [
+            "Alvaro Fidalgo",
+            "Jurgen Dann"
+        ]
+    },
+    {
+        "_id": "635810d71d19f278ad894d98",
+        "curp": "CANI38475",
+        "nombre": "Nidia Calderón",
+        "telefono": "3119481943",
+        "numCuenta": "415283498543",
+        "trabajaEn": "18SEC958",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 2,
+            "areaEspecialidad": "Español",
+            "gradoEstudio": "Licenciatura"
+        },
+        "tutorados": [
+            "Raul Jimenez",
+            "Sebastian Cordva"
+        ]
+    },
+    {
+        "_id": "635810d71d19f278ad894d99",
+        "curp": "PAJA84859",
+        "nombre": "Javier Parra",
+        "telefono": "3114758912",
+        "numCuenta": "41528347957263",
+        "trabajaEn": "18BAC857",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 5,
+            "areaEspecialidad": "Algebra",
+            "gradoEstudio": "Licenciatura"
+        },
+        "tutorados": [
+            "Javier Hernandez",
+            "Carlos Vela"
+        ]
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894d9a",
+        "curp": "NUGE94324",
+        "nombre": "Georgina Nuñes",
+        "telefono": "31112324532",
+        "numCuenta": "41534523445",
+        "trabajaEn": "18SEC958",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 1,
+            "areaEspecialidad": "Matematicas",
+            "gradoEstudio": "Licenciatura"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894d9b",
+        "curp": "GOJO345923",
+        "nombre": "Jorge Gonzalez",
+        "telefono": "311435754",
+        "numCuenta": "415242457432",
+        "trabajaEn": "18BAC857",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 5,
+            "areaEspecialidad": "Calculo",
+            "gradoEstudio": "Licenciatura"
+        }
+    },
+    {
+        "_id": "635810d71d19f278ad894d9c",
+        "curp": "LOMA943852",
+        "nombre": "Martha Lopez",
+        "telefono": "3115942394",
+        "numCuenta": "41528349234987",
+        "trabajaEn": "18PRE384",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 10,
+            "areaEspecialidad": "Pedagogía",
+            "gradoEstudio": "Licenciatura"
+        },
+        "tutorados": [
+            "Karel Campos",
+            "Carlos Rodrige"
+        ]
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894d9d",
+        "curp": "PALE684784",
+        "nombre": "Leandro Paredes",
+        "telefono": "311554264",
+        "numCuenta": "41528344312",
+        "trabajaEn": "18PRE384",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 5,
+            "areaEspecialidad": "Pedagogía",
+            "gradoEstudio": "Licenciatura"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894d9e",
+        "curp": "CRIM9394",
+        "nombre": "Imelda Cruz",
+        "telefono": "3114843144",
+        "numCuenta": "41528345235",
+        "trabajaEn": "18PRI342",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 3,
+            "areaEspecialidad": "Español",
+            "gradoEstudio": "Licenciatura"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894d9f",
+        "curp": "REJE8453",
+        "nombre": "Jesus Reyes",
+        "telefono": "311725778",
+        "numCuenta": "415235246753",
+        "trabajaEn": "18PRE384",
+        "tipo": "Administrativo",
+        "datos": {
+            "extTel": "123",
+            "horaEntrada": "08:00",
+            "correo": "reje@correo.edu.mx",
+            "funcion": "Secretario",
+            "horaSalida": "15:00"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894da1",
+        "curp": "MARO453245",
+        "nombre": "Roger Martinez",
+        "telefono": "3117468864",
+        "numCuenta": "41524476767",
+        "trabajaEn": "18PRI342",
+        "tipo": "Administrativo",
+        "datos": {
+            "extTel": "221",
+            "horaEntrada": "08:00",
+            "correo": "roma@correo.edu.mx",
+            "funcion": "Recibir llamadas",
+            "horaSalida": "15:00"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894da2",
+        "curp": "CASE4324325",
+        "nombre": "Sebastian Caseres",
+        "telefono": "311234243256",
+        "numCuenta": "4152358467684",
+        "trabajaEn": "18PRI342",
+        "tipo": "Administrativo",
+        "datos": {
+            "extTel": "432",
+            "horaEntrada": "08:00",
+            "correo": "seca@correo.edu.mx",
+            "funcion": "Secretario",
+            "horaSalida": "15:00"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894da3",
+        "curp": "ARNE",
+        "nombre": "Nestor Araujo",
+        "telefono": "3115422672",
+        "numCuenta": "4152345625452",
+        "trabajaEn": "18SEC958",
+        "tipo": "Administrativo",
+        "datos": {
+            "extTel": "430",
+            "horaEntrada": "09:00",
+            "correo": "near@correo.edu.mx",
+            "funcion": "Subir calificaciones",
+            "horaSalida": "15:00"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894da4",
+        "curp": "LAEM3045211",
+        "nombre": "Emilio Lara",
+        "telefono": "31134522324",
+        "numCuenta": "41523545673212",
+        "trabajaEn": "18SEC958",
+        "tipo": "Administrativo",
+        "datos": {
+            "extTel": "431",
+            "horaEntrada": "09:00",
+            "correo": "laem@correo.edu.mx",
+            "funcion": "Secretario",
+            "horaSalida": "15:00"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894da5",
+        "curp": "LAMI342553",
+        "nombre": "Miguel Layun",
+        "telefono": "3113452325",
+        "numCuenta": "415235642345",
+        "trabajaEn": "18BAC857",
+        "tipo": "Administrativo",
+        "datos": {
+            "extTel": "202",
+            "horaEntrada": "09:00",
+            "correo": "mila@correo.edu.mx",
+            "funcion": "Secretario",
+            "horaSalida": "15:00"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894da6",
+        "curp": "ROJO43532",
+        "nombre": "Jonathan Rodriguez",
+        "telefono": "311435522",
+        "numCuenta": "415245345463",
+        "trabajaEn": "18BAC857",
+        "tipo": "Administrativo",
+        "datos": {
+            "extTel": "201",
+            "horaEntrada": "08:00",
+            "correo": "joro@correo.edu.mx",
+            "funcion": "Secretario",
+            "horaSalida": "15:00"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894da7",
+        "curp": "VABR56578",
+        "nombre": "Bruno Valdez",
+        "telefono": "31125245625",
+        "numCuenta": "41525257252245",
+        "trabajaEn": "18BAC857",
+        "tipo": "Mantenimiento",
+        "datos": {
+            "areaEsp": "Sistemas",
+            "numTelInst": "160201245"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894da8",
+        "curp": "DOJO9357",
+        "nombre": "Jonathan Dos Santos",
+        "telefono": "311490822",
+        "numCuenta": "415234234872",
+        "trabajaEn": "18PRE384",
+        "tipo": "Mantenimiento",
+        "datos": {
+            "areaEsp": "Sistemas",
+            "numTelInst": "2134773"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894da9",
+        "curp": "ALED95626",
+        "nombre": "Edson Alvarez",
+        "telefono": "3112423534",
+        "numCuenta": "4152327863576",
+        "trabajaEn": "18PRE384",
+        "tipo": "Mantenimiento",
+        "datos": {
+            "areaEsp": "Sistemas",
+            "numTelInst": "2134773"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894daa",
+        "curp": "AQJA93567",
+        "nombre": "Javier Aquini",
+        "telefono": "3114235632",
+        "numCuenta": "41522423526",
+        "trabajaEn": "18PRI342",
+        "tipo": "Mantenimiento",
+        "datos": {
+            "areaEsp": "Cocina",
+            "numTelInst": "21329234"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894dab",
+        "curp": "FULU24692",
+        "nombre": "Luis Fuentes",
+        "telefono": "311470852",
+        "numCuenta": "415275293455",
+        "trabajaEn": "18PRI342",
+        "tipo": "Mantenimiento",
+        "datos": {
+            "areaEsp": "Lavado",
+            "numTelInst": "21345256"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894dac",
+        "curp": "MAHE62467",
+        "nombre": "Henry Martin",
+        "telefono": "3114324235",
+        "numCuenta": "4152286932874",
+        "trabajaEn": "18SEC958",
+        "tipo": "Mantenimiento",
+        "datos": {
+            "areaEsp": "Lavado",
+            "numTelInst": "20923453"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894dad",
+        "curp": "SARI4527",
+        "nombre": "Richar Sanchez",
+        "telefono": "3113235479",
+        "numCuenta": "41523454397568",
+        "trabajaEn": "18SEC958",
+        "tipo": "Mantenimiento",
+        "datos": {
+            "areaEsp": "Sistemas",
+            "numTelInst": "20934255"
+        }
+    },
+    {
+        "tutorados": [],
+        "_id": "635810d71d19f278ad894dae",
+        "curp": "ZEAL5657",
+        "nombre": "Alejandro Zendejas",
+        "telefono": "31139385623",
+        "numCuenta": "415223472386",
+        "trabajaEn": "18BAC857",
+        "tipo": "Mantenimiento",
+        "datos": {
+            "areaEsp": "Sistemas",
+            "numTelInst": "160201245"
+        }
+    },
+    {
+        "_id": "6368219a0f18d0956b1f365c",
+        "curp": "ZAVA93845",
+        "nombre": "Zavala",
+        "numCuenta": "41523454397568",
+        "trabajaEn": "ITT1840",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 3,
+            "areaEspecialidad": "Matematicas",
+            "gradoEstudio": "Licenciatura"
+        },
+        "tutorados": [
+            "Dani"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "636822c80f18d0956b1f366c",
+        "curp": "OCOS334513",
+        "nombre": "Oscar Ochoa",
+        "numCuenta": "4152456092945",
+        "trabajaEn": "18PRE384",
+        "tipo": "Administrativo",
+        "datos": {
+            "extTel": "122",
+            "horaEntrada": "08:00",
+            "correo": "@correo.edu.mx",
+            "funcion": "Capturista",
+            "horaSalida": "15:00"
+        },
+        "tutorados": [],
+        "__v": 0
+    }
+]
