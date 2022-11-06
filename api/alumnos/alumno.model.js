@@ -7,7 +7,8 @@ const alumnoSchema = mongoose.Schema({
     curp: String,
     tutor:String,
     escuela:String,
-    fechaIngre:String
+    fechaIngre:String,
+    enabled:Boolean
 });
 
 module.exports = mongoose.model('alumnos', alumnoSchema);

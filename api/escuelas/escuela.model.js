@@ -12,7 +12,8 @@ const escuelaSchema = mongoose.Schema({
     alumnos:[{
         nombre:String,
         fechaIngre:String
-    }]
+    }],
+    enabled:Boolean
 });
 
 module.exports = mongoose.model('escuelas', escuelaSchema);

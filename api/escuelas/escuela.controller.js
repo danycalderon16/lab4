@@ -15,12 +15,12 @@ exports.getAll = ((req, res) => {
 
 exports.getOneByName = ((req, res,) => {
     try {
-        Escuela.findOne({ "nombre": req.params.nombre }, (err, alumno) => {
-            if (err) { res.send(err) }
-            res.status(200).json(alumno);
+        Escuela.findOne({ "nombre": req.params.nombre }, (err, escuela) => {
+            if (err || escuela === null) { return res.status(404).send("Escuela no encontrada. Error:" + err) }
+             res.status(200).json(escuela); 
         })
     } catch (error) {
-        res.status(404).send(error.message);
+        res.status(404).send("Hubo un error " + error.message);
     }
 });
 
@@ -58,27 +58,32 @@ exports.getDocentes = ((req, res,) => {
 });
 
 exports.create = ((req, res) => {
-    try {        
-        const escuela = {
+    try {
+        const newEscuela = {
             _id: new mongoose.Types.ObjectId(),
             nombre: req.body.nombre,
             clave: req.body.clave,
-            direccion:req.body.direccion,
-            ciudad:req.body.ciudad,
+            direccion: req.body.direccion,
+            ciudad: req.body.ciudad,
             administrativos: req.body.administrativos,
             docentes: req.body.docentes,
             mantenimiento: req.body.mantenimiento,
-            alumnos: req.body.alumnos
+            alumnos: req.body.alumnos,
+            enabled: req.body.enabled,
         }
-        
-        console.log(escuela);
-        Escuela.create(escuela, (err) => {
-            if (err) {
-                res.send(err);
-            }
-            return res.status(201).json(escuela);
+
+        Escuela.findOne({ "clave": req.body.clave }, (err, escuela) => {
+            if (escuela !== null) { 
+                return res.status(403).send(`Escuela con clave ${req.body.clave} ya existe`) ;
+            }             
+            Escuela.create(newEscuela, (err) => {
+                if (err) {
+                    return res.send(err);
+                }
+                return res.status(201).json(newEscuela);
+            });
         });
-    } catch (error) {        
+    } catch (error) {
         res.status(404).send(error.message);
     }
 });
