@@ -1,0 +1,68 @@
+[
+    {
+        "fechaNac": "05/02/2013",
+        "nombre": "Alvaro Fidalgo",
+        "curp": "FIAL3434562",
+        "tutor": "Clara Cecilia Zurita"
+    },
+    {
+        "fechaNac": "01/06/14",
+        "nombre": "Jurgen Dann",
+        "curp": "DAJU42456",
+        "tutor": "Clara Cecilia Zurita"
+    },
+    {
+        "fechaNac": "12/08/2006",
+        "nombre": "Raul Jimenez",
+        "curp": "JIRA09532",
+        "tutor": "Nidia Calderón"
+    },
+    {
+        "fechaNac": "09/11/2008",
+        "nombre": "Sebastian Cordova",
+        "curp": "COSE324565",
+        "tutor": "Nidia Calderón"
+    },
+    {
+        "fechaNac": "29/10/2006",
+        "nombre": "Javier Hernandez",
+        "curp": "HEJA948842",
+        "tutor": "Javier Parra"
+    },
+    {
+        "fechaNac": "05/12/15",
+        "nombre": "Carlos Vela",
+        "curp": "VECA049562",
+        "tutor": "Javier Parra"
+    },
+    {
+        "fechaNac": "31/05/2015",
+        "nombre": "Karel Campos",
+        "curp": "CAKA43235",
+        "tutor": "Martha Lopez"
+    },
+    {
+        "fechaNac": "04/09/2016",
+        "nombre": "Carlos Rodrigez",
+        "curp": "ROCA43552",
+        "tutor": "Martha Lopez"
+    },
+    {
+        "nombre": "Daniel Calderón",
+        "fechaNac": "16/1/99",
+        "curp": "CAVD991116HTNLR04",
+        "tutor": "Clara Cecilia Zurita"
+    },
+    {
+        "nombre": "Daniel Calderón",
+        "fechaNac": "16/1/99",
+        "curp": "CAVD991116HTNLR04",
+        "tutor": "Clara Cecilia Zurita"
+    },
+    {
+        "nombre": "Segio Carrillo",
+        "fechaNac": "16/1/99",
+        "curp": "CAVD991116HTNLR04",
+        "tutor": "Clara Cecilia Zurita"
+    }
+]
