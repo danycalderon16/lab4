@@ -57,21 +57,21 @@ exports.create = (jsonParser,(req,res)=>{
                     if(newTrabajador.tipo==='Administrativo'){
                         Escuela.updateOne(
                             {clave:newTrabajador.trabajaEn},
-                            {$push: {'administrativos':newTrabajador.nombre}},  (err) =>{
+                            {$push: {'administrativos':newTrabajador._id}},  (err) =>{
                                 if (err) return res.send(err);
                             });
                     }
                     if(newTrabajador.tipo==='Mantenimiento'){
                         Escuela.updateOne(
                             {clave:newTrabajador.trabajaEn},
-                            {$push: {'mantenimiento':newTrabajador.nombre}},  (err) =>{
+                            {$push: {'mantenimiento':newTrabajador._id}},  (err) =>{
                                 if (err) return res.send(err);
                             });
                     }
                     if(newTrabajador.tipo==='Docente'){
                         Escuela.updateOne(
                             {clave:newTrabajador.trabajaEn},
-                            {$push: {'docentes':newTrabajador.nombre}},  (err) =>{
+                            {$push: {docentes:newTrabajador._id}},  (err) =>{
                                 if (err) return res.send(err);
                             });
                     }            

@@ -55,14 +55,14 @@ exports.create = ((req, res) => {
 
                     Trabajador.updateOne(
                         { nombre: newAlumno.tutor },
-                        { $push: { tutorados: newAlumno.nombre } }, (err,result) => {
+                        { $push: { tutorados: newAlumno._id } }, (err,result) => {
                             console.log(result);
                             if (err) { return res.send(err) }
                         });
                     Escuela.updateOne(
                         { nombre: newAlumno.estudia },
                         {
-                            $push: { alumnos: { nombre: newAlumno.nombre, fechaIngre: newAlumno.fechaIngre } }
+                            $push: { alumnos: { idAlumno: newAlumno._id, fechaIngre: newAlumno.fechaIngre } }
                         }, function (err,result) {
                             if (err) return res.send(err);
                         });
@@ -81,3 +81,39 @@ exports.create = ((req, res) => {
         res.status(404).send(error.message);
     }
 });
+
+exports.update = async (req,res)=>{
+    try {
+        const student = await Alumno.findById(req.params.id).exec();
+        const newStudent = req.body;
+        if('tutor' in newStudent){
+            const newTutor = await Trabajador.findOne({ "nombre": newStudent.tutor }).exec();
+            const oldTutor = await Trabajador.findOne({ "nombre": student.tutor }).exec();
+            if(newTutor===null)
+            return res.status(500).send('Tutor no encontrado');
+            console.log(oldTutor);
+            var index = oldTutor.tutorados.indexOf(student._id);
+            if (index !== -1) {
+                oldTutor.tutorados.splice(index, 1);
+            }
+            newTutor.tutorados.push(student._id);
+            Object.assign(oldTutor,oldTutor.tutorados)
+            Object.assign(newTutor,newTutor.tutorados)
+            console.log(oldTutor);
+            oldTutor.save();
+            newTutor.save();
+            Object.assign(student,req.body);
+            const aux = {tutorados:[student.nombre]}
+            // Trabajador.findOne({ "nombre": newStudent.tutor }, (err, tutor) => {
+            //     if (tutor == null) {
+            //     }               
+                
+            // });
+            // student.save();
+            
+            return res.send({data:student});
+        }
+    } catch (error) {
+        res.status(404).send('Alumno no encontrado\n'+error.message);        
+    }
+};

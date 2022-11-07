@@ -8,5 +8,6 @@ const router = express.Router()
 router.get('/',controller.getAll);
 router.get('/:nombre',controller.getOneByName);
 router.post('/crear',controller.create);
+router.patch('/actualizar/:id',controller.update);
 
 module.exports = router

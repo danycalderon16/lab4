@@ -10,7 +10,7 @@ const escuelaSchema = mongoose.Schema({
     docentes: [String],
     mantenimiento: [String],
     alumnos:[{
-        nombre:String,
+        idAlumno:String,
         fechaIngre:String
     }],
     enabled:Boolean

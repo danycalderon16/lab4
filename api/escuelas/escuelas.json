@@ -1,0 +1,152 @@
+[
+    {
+        "_id": "635810811d19f278ad894d93",
+        "clave": "18PRE384",
+        "ciudad": "Tepic",
+        "direccion": "Juan Escutia 34",
+        "nombre": "Jose Rosas Moreno",
+        "administrativos": [
+            "Jesus Reyes",
+            "Oscar Ochoa"
+        ],
+        "docentes": [
+            "Martha Lopez",
+            "Leandro Paredes"
+        ],
+        "mantenimiento": [
+            "Edson Alvarez",
+            "Jonathan Dos Santos"
+        ],
+        "alumnos": [
+            {
+                "_id": "636705f9926a7623e1fcf537",
+                "nombre": "Karel Campos",
+                "fechaIngre": "24/08/2020"
+            },
+            {
+                "_id": "636705f9926a7623e1fcf538",
+                "nombre": "Carlos Rodrigez",
+                "fechaIngre": "19/08/2019"
+            }
+        ]
+    },
+    {
+        "_id": "635810811d19f278ad894d94",
+        "clave": "18PRI342",
+        "ciudad": "Tepic",
+        "direccion": "Lerdo 123",
+        "nombre": "Amado Nervo",
+        "administrativos": [
+            "Sebastian Caseres",
+            "Roger Martinez"
+        ],
+        "docentes": [
+            "Clara Cecilia Zurita",
+            "Imelda Cruz"
+        ],
+        "mantenimiento": [
+            "Javier Aquino",
+            "Luis Fuentes"
+        ],
+        "alumnos": [
+            {
+                "_id": "636705f9926a7623e1fcf539",
+                "nombre": "Alvaro Fidalgo",
+                "fechaIngre": "19/08/2019"
+            },
+            {
+                "_id": "636705f9926a7623e1fcf53a",
+                "nombre": "Jurgen Damm",
+                "fechaIngre": "24/08/2020"
+            }
+        ]
+    },
+    {
+        "_id": "635810811d19f278ad894d95",
+        "clave": "18BAC857",
+        "ciudad": "Tepic",
+        "direccion": "Puerto Rico 33",
+        "nombre": "CETIS 100",
+        "administrativos": [
+            "Miguel Layun",
+            "Jonathan Rodriguez"
+        ],
+        "docentes": [
+            "Javier Parra",
+            "Jorge Gonzalez"
+        ],
+        "mantenimiento": [
+            "Alejandro Zendejas",
+            "Bruno Valdez"
+        ],
+        "alumnos": [
+            {
+                "_id": "636705f9926a7623e1fcf53b",
+                "nombre": "Javier Hernandez",
+                "fechaIngre": "23/08/2021"
+            },
+            {
+                "_id": "636705f9926a7623e1fcf53c",
+                "nombre": "Carlos Vela",
+                "fechaIngre": "21/08/2018"
+            }
+        ]
+    },
+    {
+        "_id": "635810811d19f278ad894d96",
+        "clave": "18SEC958",
+        "ciudad": "Tepic",
+        "direccion": "Morelia 543",
+        "nombre": "Justo Sierra",
+        "administrativos": [
+            "Emilio Lara",
+            "Nestor Araujo"
+        ],
+        "docentes": [
+            "Nidia Calderón",
+            "Georgina Nuñes"
+        ],
+        "mantenimiento": [
+            "Richar Sanchez",
+            "Henry Martin"
+        ],
+        "alumnos": [
+            {
+                "_id": "636705f9926a7623e1fcf53d",
+                "nombre": "Raul Jimenez",
+                "fechaIngre": "19/08/2019"
+            },
+            {
+                "_id": "636705f9926a7623e1fcf53e",
+                "nombre": "Sebastian Cordova",
+                "fechaIngre": "23/08/2021"
+            }
+        ]
+    },
+    {
+        "_id": "6368432c68401fa794ffac89",
+        "clave": "ITT1840",
+        "ciudad": "Tepic",
+        "direccion": "Av Tecnológico 344",
+        "nombre": "Ittepic",
+        "administrativos": [],
+        "docentes": [
+            "Zavala"
+        ],
+        "mantenimiento": [],
+        "alumnos": [
+            {
+                "nombre": "Dani",
+                "fechaIngre": "20/08/2021",
+                "_id": "636847cdb6b100c416f81e27"
+            },
+            {
+                "nombre": "Dani",
+                "fechaIngre": "20/08/2021",
+                "_id": "63685903e5742530e3d376c2"
+            }
+        ],
+        "enabled": true,
+        "__v": 0
+    }
+]

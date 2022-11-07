@@ -6,7 +6,7 @@ const alumnoSchema = mongoose.Schema({
     fechaNac: String,
     curp: String,
     tutor:String,
-    escuela:String,
+    estudia:String,
     fechaIngre:String,
     enabled:Boolean
 });
