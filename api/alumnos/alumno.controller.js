@@ -87,7 +87,6 @@ exports.update = async (req,res)=>{
         const student = await Alumno.findById(req.params.id).exec();
         const newStudent = req.body;
 
-
         let oldTutor = {};
         let newTutor = {};
 
@@ -126,13 +125,9 @@ exports.update = async (req,res)=>{
             newTutor.save();
         }
 
-
-        // console.log(student);
-        // console.log(newStudent);
-
         if(updateSchool){            
-            // console.log(oldSchool.alumnos);
-            console.log('antes',newSchool.alumnos);
+            console.log(oldSchool.nombre,oldSchool.alumnos);
+            console.log('////////////////');
             const searchObject= oldSchool.alumnos.find((alumno) => alumno.idAlumno==student._id);
             const indexObject = oldSchool.alumnos.findIndex((alumno) => alumno.idAlumno==student._id);
             let auxNewObj = [];
@@ -144,26 +139,19 @@ exports.update = async (req,res)=>{
             oldSchool.alumnos.map(alumno =>{
                 auxOldObj.push(alumno);
             });
-
-            // console.log(newSchool.alumnos);
-            // console.log(auxNewObj);
             auxNewObj.push(searchObject);
-            // console.log(auxNewObj);
                     
             if(auxOldObj.length===1){
-                auxOldObj.alumnos = [];
+                auxOldObj = [];
             }else{
                 auxOldObj.splice(indexObject, 1);
             }
 
-            /* Object.assign(oldSchool.alumnos,auxOldObj)*/
-            /* Object.assign(newSchool.alumnos,auxNewObj)*/
-
             oldSchool.alumnos = auxOldObj;
             newSchool.alumnos = auxNewObj;
 
-            // console.log(oldSchool.alumnos);
-            console.log('despues',newSchool.alumnos);
+            console.log(oldSchool.nombre,oldSchool.alumnos);
+            console.log(newSchool.nombre,newSchool.alumnos);
 
             oldSchool.save();
             newSchool.save();

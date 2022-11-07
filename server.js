@@ -21,6 +21,6 @@ async function main() {
 app.use('/api/alumnos', alumnos);
 app.use('/api/escuelas', escuelas);
 app.use('/api/trabajadores', trabajadores);
-app.use('/api', (req,res)=>res.status(200).send("OK"));
+// app.use('/api', (req,res)=>res.status(200).send("OK"));
 
 app.listen(port,()=>{console.log('Escucha en puerto:'+port)})

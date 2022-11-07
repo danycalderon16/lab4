@@ -83,3 +83,51 @@ exports.create = (jsonParser,(req,res)=>{
         res.status(404).send(error.message);
     }
 });
+
+exports.update = async (req,res)=>{
+    // try {
+        const worker = await Trabajador.findById(req.params.id).exec();
+        const newWorker = req.body;
+
+        let oldSchool = {};
+        let newSchool = {};
+        
+        let updateSchool = false;
+        
+        if('trabajaEn' in newWorker){
+            oldSchool = await Escuela.findOne({"clave":worker.trabajaEn}).exec();
+            if(newSchool===null){
+                return res.status(500).send('Escuela no encontrada')
+            }
+            newSchool = await Escuela.findOne({"clave":newWorker.trabajaEn}).exec();
+            updateSchool = true;
+        }        
+        console.log(oldSchool.nombre,oldSchool.docentes);
+        console.log(newSchool.nombre,newSchool.docentes);
+
+        let typeOfWorker = worker.tipo
+
+        if(updateSchool){
+            if(typeOfWorker==='Docente'){
+                let index = oldSchool.docentes.indexOf(worker._id);
+                if (index !== -1) {
+                    oldSchool.docentes.splice(index, 1);
+                }
+                newSchool.docentes.push(worker._id);
+                Object.assign(oldSchool,oldSchool.docentes)
+                Object.assign(newSchool,newSchool.docentes)
+                oldSchool.save();
+                newSchool.save();
+            }
+        }
+        console.log(oldSchool.nombre,oldSchool.docentes);
+        console.log(newSchool.nombre,newSchool.docentes);
+
+
+        Object.assign(worker,req.body);
+        worker.save();
+        res.status(201).json(worker);
+    // } catch (error) {
+        
+    // }
+};

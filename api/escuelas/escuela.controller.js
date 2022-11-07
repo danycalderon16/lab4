@@ -87,3 +87,25 @@ exports.create = ((req, res) => {
         res.status(404).send(error.message);
     }
 });
+
+exports.update = async(req,res)=>{
+    try {
+        const school = await Escuela.findById(req.params.id).exec();
+        const newSchool = req.body;
+
+        if("alumnos" in newSchool){
+            return res.status(403).send('No se puede actulizar la lista de alumnos directamente');
+        }
+        if("docentes" in newSchool ||"administrativos" in newSchool ||"mantenimiento" in newSchool){
+            return res.status(403).send('No se puede actulizar la lista de trabajadores directamente');
+        }
+
+        Object.assign(school,req.body);
+        school.save();
+        return res.send({data:school,newData:newSchool});
+        
+    } catch (error) {
+        res.status(404).send('Escuela no encontrada\n'+error);    
+        
+    }
+}

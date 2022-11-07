@@ -11,13 +11,6 @@ router.get('/docentes',controller.getDocentes)
 
 router.post('/crear',controller.create);
 
-router.route('/')
-    .put((req, res,) => {
-        res.json({ msg: `PUT Se ha actualizado una escuela` });
-    });
-router.route('/escuelas')
-    .delete((req, res,) => {
-        res.json({ msg: `DELETE Se ha eliminado una escuela` });
-    });
+router.patch('/actualizar/:id',controller.update);
 
 module.exports = router
