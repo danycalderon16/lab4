@@ -86,15 +86,36 @@ exports.update = async (req,res)=>{
     try {
         const student = await Alumno.findById(req.params.id).exec();
         const newStudent = req.body;
-        if('tutor' in newStudent){
-            const newTutor = await Trabajador.findOne({ "nombre": newStudent.tutor }).exec();
-            const oldTutor = await Trabajador.findOne({ "nombre": student.tutor }).exec();
-            
-            console.log("viejo",oldTutor.tutorados);
-            console.log("nuevo",newTutor.tutorados);
+
+
+        let oldTutor = {};
+        let newTutor = {};
+
+        let updateTutor = false;
+        let updateSchool = false;
+        
+        let oldSchool = {};
+        let newSchool = {};
+        
+        if('tutor' in newStudent){            
+            newTutor = await Trabajador.findOne({ "nombre": newStudent.tutor }).exec();
             if(newTutor===null)
-            return res.status(500).send('Tutor no encontrado');
-            var index = oldTutor.tutorados.indexOf(student._id);
+                return res.status(500).send('Tutor no encontrado');
+            oldTutor = await Trabajador.findOne({ "nombre": student.tutor }).exec();
+            updateTutor = true;
+        }
+
+        if('estudia' in newStudent){
+            oldSchool = await Escuela.findOne({"nombre":student.estudia}).exec();
+            if(newSchool===null){
+                return res.status(500).send('Escuela no encontrada')
+            }
+            newSchool = await Escuela.findOne({"nombre":newStudent.estudia}).exec();
+            updateSchool = true;
+        }
+
+        if(updateTutor){
+            let index = oldTutor.tutorados.indexOf(student._id);
             if (index !== -1) {
                 oldTutor.tutorados.splice(index, 1);
             }
@@ -103,15 +124,55 @@ exports.update = async (req,res)=>{
             Object.assign(newTutor,newTutor.tutorados)
             oldTutor.save();
             newTutor.save();
-            console.log("viejo",oldTutor.tutorados);
-            console.log("nuevo",newTutor.tutorados);
-            // console.log(student);
-            Object.assign(student,req.body);
-            // console.log(student);
-            student.save();
-            return res.send({data:student});
         }
+
+
+        // console.log(student);
+        // console.log(newStudent);
+
+        if(updateSchool){            
+            // console.log(oldSchool.alumnos);
+            console.log('antes',newSchool.alumnos);
+            const searchObject= oldSchool.alumnos.find((alumno) => alumno.idAlumno==student._id);
+            const indexObject = oldSchool.alumnos.findIndex((alumno) => alumno.idAlumno==student._id);
+            let auxNewObj = [];
+            let auxOldObj = [];
+
+            newSchool.alumnos.map(alumno =>{
+                auxNewObj.push(alumno);
+            });
+            oldSchool.alumnos.map(alumno =>{
+                auxOldObj.push(alumno);
+            });
+
+            // console.log(newSchool.alumnos);
+            // console.log(auxNewObj);
+            auxNewObj.push(searchObject);
+            // console.log(auxNewObj);
+                    
+            if(auxOldObj.length===1){
+                auxOldObj.alumnos = [];
+            }else{
+                auxOldObj.splice(indexObject, 1);
+            }
+
+            /* Object.assign(oldSchool.alumnos,auxOldObj)*/
+            /* Object.assign(newSchool.alumnos,auxNewObj)*/
+
+            oldSchool.alumnos = auxOldObj;
+            newSchool.alumnos = auxNewObj;
+
+            // console.log(oldSchool.alumnos);
+            console.log('despues',newSchool.alumnos);
+
+            oldSchool.save();
+            newSchool.save();
+        }
+
+        Object.assign(student,req.body);
+        student.save();
+        return res.send({data:student});
     } catch (error) {
-        res.status(404).send('Alumno no encontrado\n'+error.message);        
+        res.status(404).send('Alumno no encontrado\n'+error);        
     }
 };
