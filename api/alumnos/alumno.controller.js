@@ -89,9 +89,11 @@ exports.update = async (req,res)=>{
         if('tutor' in newStudent){
             const newTutor = await Trabajador.findOne({ "nombre": newStudent.tutor }).exec();
             const oldTutor = await Trabajador.findOne({ "nombre": student.tutor }).exec();
+            
+            console.log("viejo",oldTutor.tutorados);
+            console.log("nuevo",newTutor.tutorados);
             if(newTutor===null)
             return res.status(500).send('Tutor no encontrado');
-            console.log(oldTutor);
             var index = oldTutor.tutorados.indexOf(student._id);
             if (index !== -1) {
                 oldTutor.tutorados.splice(index, 1);
@@ -99,18 +101,14 @@ exports.update = async (req,res)=>{
             newTutor.tutorados.push(student._id);
             Object.assign(oldTutor,oldTutor.tutorados)
             Object.assign(newTutor,newTutor.tutorados)
-            console.log(oldTutor);
             oldTutor.save();
             newTutor.save();
+            console.log("viejo",oldTutor.tutorados);
+            console.log("nuevo",newTutor.tutorados);
+            // console.log(student);
             Object.assign(student,req.body);
-            const aux = {tutorados:[student.nombre]}
-            // Trabajador.findOne({ "nombre": newStudent.tutor }, (err, tutor) => {
-            //     if (tutor == null) {
-            //     }               
-                
-            // });
-            // student.save();
-            
+            // console.log(student);
+            student.save();
             return res.send({data:student});
         }
     } catch (error) {

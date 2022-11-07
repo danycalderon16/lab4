@@ -124,29 +124,17 @@
         ]
     },
     {
-        "_id": "6368432c68401fa794ffac89",
         "clave": "ITT1840",
         "ciudad": "Tepic",
         "direccion": "Av Tecnológico 344",
         "nombre": "Ittepic",
         "administrativos": [],
-        "docentes": [
-            "Zavala"
-        ],
+        "docentes": [    ],
         "mantenimiento": [],
         "alumnos": [
-            {
-                "nombre": "Dani",
-                "fechaIngre": "20/08/2021",
-                "_id": "636847cdb6b100c416f81e27"
-            },
-            {
-                "nombre": "Dani",
-                "fechaIngre": "20/08/2021",
-                "_id": "63685903e5742530e3d376c2"
-            }
+            {   },
+            {  }
         ],
-        "enabled": true,
-        "__v": 0
+        "enabled": true
     }
 ]

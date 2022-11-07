@@ -1,6 +1,31 @@
 [
     {
-        "_id": "635810d71d19f278ad894d97",
+        "curp": "ZAVA93845",
+        "nombre": "Zavala",
+        "numCuenta": "41523454397568",
+        "trabajaEn": "ITT1840",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 3,
+            "areaEspecialidad": "Matematicas",
+            "gradoEstudio": "Licenciatura"
+        },
+        "tutorados": [ ]
+    },
+    {
+        "curp": "RAY93845",
+        "nombre": "Ray",
+        "numCuenta": "41523454397568",
+        "trabajaEn": "ITT1840",
+        "tipo": "Docente",
+        "datos": {
+            "numOficina": 3,
+            "areaEspecialidad": "Matematicas",
+            "gradoEstudio": "Licenciatura"
+        },
+        "tutorados": [ ]
+    },
+    {
         "curp": "ZUCE93845",
         "nombre": "Clara Cecilia Zurita",
         "telefono": "3114857813",
@@ -12,10 +37,7 @@
             "areaEspecialidad": "Matematicas",
             "gradoEstudio": "Licenciatura"
         },
-        "tutorados": [
-            "Alvaro Fidalgo",
-            "Jurgen Dann"
-        ]
+        "tutorados": [ ]
     },
     {
         "_id": "635810d71d19f278ad894d98",
