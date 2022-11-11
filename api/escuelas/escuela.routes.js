@@ -4,10 +4,11 @@ const controller = require('./escuela.controller');
 
 const router = express.Router()
 
-router.get('/',controller.getAll)
-router.get('/:nombre',controller.getOneByName)
+router.get('/',controller.getAll);
+router.get('/:nombre',controller.getOneByName);
 // router.get('/:tipo',controller.getAllByType);
-router.get('/docentes',controller.getDocentes)
+router.get('/trabajadores/docentes',controller.getDocentes)
+router.get('/trabajadores/administradores',controller.getAdmons);
 
 router.post('/crear',controller.create);
 

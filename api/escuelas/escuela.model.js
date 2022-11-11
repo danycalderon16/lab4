@@ -6,9 +6,9 @@ const escuelaSchema = mongoose.Schema({
     ciudad: String,
     direccion: String,
     nombre: String,
-    administrativos: [String],
-    docentes: [String],
-    mantenimiento: [String],
+    administrativos: [mongoose.Schema.Types.ObjectId],
+    docentes:[mongoose.Schema.Types.ObjectId],
+    mantenimiento:[mongoose.Schema.Types.ObjectId],
     alumnos:[{
         idAlumno:String,
         fechaIngre:String

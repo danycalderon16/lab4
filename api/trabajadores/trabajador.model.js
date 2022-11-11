@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const trabajadorSchema = mongoose.Schema({
-    _id: String,
+    _id:{ type: mongoose.Schema.Types.ObjectId },
     curp:String,
     nombre: String,
     telfono: String,
@@ -13,7 +13,7 @@ const trabajadorSchema = mongoose.Schema({
         // areaEspecialidad:String,
         // gradoEstudio:String
     },
-    tutorados:[String],
+    tutorados:[mongoose.Schema.Types.ObjectId],
     enabled:Boolean
 });
 
